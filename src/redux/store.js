@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './dataSlice'
+
+import dataSlice from './dataSlice'
+import modalSlice from './modalSlice'
 export default configureStore({
     reducer: {
-        counter: counterReducer,
+        data:dataSlice,
+        modal:modalSlice
       },
 })

@@ -1,6 +1,18 @@
 import React from 'react'
 import {BiMessageSquareAdd} from 'react-icons/bi'
+import { useDispatch } from 'react-redux'
+
+
+
+
+
+
 const Header = () => {
+
+const dispatch =useDispatch()
+
+
+
   return (
     <div className='flex items-center justify-between bg-indigo-600 text-white px-3 py-3'>
       <div className='text-3l'>REACT UYHGULMA</div>
