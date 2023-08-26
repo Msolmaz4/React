@@ -1,29 +1,17 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../src/redux/reducer'
-
+import React from 'react' 
+import { BrowserRouter as Router, Routes,Route, BrowserRouter } from 'react-router-dom'
+import Product from './components/Product'
 
 const  App = ()=> {
-  const count = useSelector((state) => state.counter.value)
-  const dispatch = useDispatch()
+
 
   return (
     <div>
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/home' element={<Product/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }
