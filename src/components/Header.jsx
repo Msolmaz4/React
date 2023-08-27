@@ -1,6 +1,7 @@
 import React from 'react'
 import {BiMessageSquareAdd} from 'react-icons/bi'
 import { useDispatch } from 'react-redux'
+import { modalFunc } from '../redux/modalSlice'
 
 
 
@@ -9,7 +10,7 @@ import { useDispatch } from 'react-redux'
 
 const Header = () => {
 
-const dispatch =useDispatch()
+const dispatch =useDispatch();
 
 
 
@@ -26,7 +27,7 @@ const dispatch =useDispatch()
         <div>
           <input className='h-10 rounded-lg px-4'  type="text" placeholder='arama yapiniz' />
         </div>
-        <div className='bg-indigo-800 w-10 h-10 rounded-full items-center justify-center cursor-pointer'>
+        <div onClick={()=>dispatch(modalFunc())}  className='bg-indigo-800 w-10 h-10 rounded-full items-center justify-center cursor-pointer'>
           <BiMessageSquareAdd size={24}/>
         </div>
       </div>
